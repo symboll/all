@@ -35,7 +35,7 @@ class _IndexPageState extends State<IndexPage> {
       title: Text('首页')
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.home),
+      icon: Icon(Icons.search),
       title: Text('分类')
     ),
     BottomNavigationBarItem(
