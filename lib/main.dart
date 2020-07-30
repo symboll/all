@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/list_view_demo.dart';
 
@@ -61,6 +62,7 @@ class Home extends StatelessWidget {
           ]
         ),
         drawer: DrawerDemo(),
+        bottomNavigationBar: BottomNavigationBarDemo(),
       )
     );
   }
