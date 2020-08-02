@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'demo/basic_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
+import 'demo/layout_demo.dart';
 import 'demo/list_view_demo.dart';
+import 'demo/sliver_demo.dart';
+import 'demo/view_demo.dart';
 
 void main() => runApp(App());
 
@@ -27,7 +30,7 @@ class Home extends StatelessWidget {
     
     // TODO: implement build
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[200],
         appBar:  AppBar(
@@ -39,7 +42,7 @@ class Home extends StatelessWidget {
           title: Text('app'.toUpperCase()),
           actions: <Widget>[
             IconButton(icon: Icon(Icons.search), tooltip: 'Serach', onPressed: () => {
-              debugPrint('bbbb')
+              debugPrint('Search')
             })
           ],
           elevation: 0.0,
@@ -52,15 +55,17 @@ class Home extends StatelessWidget {
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.change_history)),
               Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.view_quilt))
             ]
           ),
         ),
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.local_florist, size: 128.0,color: Colors.red,),
-            // Icon(Icons.change_history, size: 128.0,color: Colors.red),
+            ListViewDemo(),
             BasicDemo(),
-            Icon(Icons.directions_bike, size: 128.0,color: Colors.red)
+            // LayoutDemo(),
+            ViewDemo(),
+            SliverDemo()
           ]
         ),
         drawer: DrawerDemo(),
