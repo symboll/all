@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'demo/basic_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
+import 'demo/form/form_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/list_view_demo.dart';
+import 'demo/navigator_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/view_demo.dart';
-
+import 'demo/navigator_demo.dart' as np;
 void main() => runApp(App());
 
 class App extends StatelessWidget {
@@ -14,7 +16,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: Home(),
+      initialRoute: '/',
+      routes: {
+        '/':      (context) => NavigatorDemo(),
+        '/about': (context) => np.Page(title: 'About'),
+        '/home':  (context) =>  Home(),
+        '/form':  (context)=> FormDemo()
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         // highlightColor: Color.fromRGBO(255, 255, 255, 0.5)
@@ -70,6 +79,10 @@ class Home extends StatelessWidget {
         ),
         drawer: DrawerDemo(),
         bottomNavigationBar: BottomNavigationBarDemo(),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.arrow_back),
+          onPressed: ()=> Navigator.pop(context)
+        ),
       )
     );
   }
