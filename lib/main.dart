@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/components/material_components.dart';
 import 'demo/basic_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
@@ -22,7 +23,8 @@ class App extends StatelessWidget {
         '/':      (context) => NavigatorDemo(),
         '/about': (context) => np.Page(title: 'About'),
         '/home':  (context) =>  Home(),
-        '/form':  (context)=> FormDemo()
+        '/form':  (context)=> FormDemo(),
+        '/mdc':   (context) => MaterialComponents()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
