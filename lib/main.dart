@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'demo/form/form_components.dart';
 import 'demo/components/material_components.dart';
 import 'demo/basic_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
-import 'demo/form/form_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/list_view_demo.dart';
 import 'demo/navigator_demo.dart';
@@ -23,7 +23,7 @@ class App extends StatelessWidget {
         '/':      (context) => NavigatorDemo(),
         '/about': (context) => np.Page(title: 'About'),
         '/home':  (context) =>  Home(),
-        '/form':  (context)=> FormDemo(),
+        '/form':  (context)=> FormComponents(),
         '/mdc':   (context) => MaterialComponents()
       },
       theme: ThemeData(
