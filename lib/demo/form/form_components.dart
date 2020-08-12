@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import './form_demo.dart';
-import './checkbox_demo.dart';
+import 'radio_demo.dart';
+import 'form_demo.dart';
+import 'checkbox_demo.dart';
+import 'switch_demo.dart';
 class FormComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,6 +20,14 @@ class FormComponents extends StatelessWidget {
           ListItem(
             title: "CheckBoxDemo",
             page: CheckBoxDemo()
+          ),
+          ListItem(
+            title: "RadioDemo",
+            page: RadioDemo()
+          ),
+           ListItem(
+            title: "SwitchDemo",
+            page: SwitchDemo()
           ),
         ],
       )
