@@ -8,6 +8,7 @@ import 'demo/layout_demo.dart';
 import 'demo/list_view_demo.dart';
 import 'demo/navigator_demo.dart';
 import 'demo/sliver_demo.dart';
+import 'demo/table/table_components.dart';
 import 'demo/view_demo.dart';
 import 'demo/navigator_demo.dart' as np;
 void main() => runApp(App());
@@ -24,7 +25,8 @@ class App extends StatelessWidget {
         '/about': (context) => np.Page(title: 'About'),
         '/home':  (context) =>  Home(),
         '/form':  (context)=> FormComponents(),
-        '/mdc':   (context) => MaterialComponents()
+        '/mdc':   (context) => MaterialComponents(),
+        '/table': (context) => TableComponents()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,

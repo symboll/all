@@ -5,8 +5,7 @@ class NavigatorDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Wrap(
           children: <Widget>[
             FlatButton(
               onPressed: () => Navigator.pushNamed(context, '/home'),
@@ -28,6 +27,10 @@ class NavigatorDemo extends StatelessWidget {
             FlatButton(
               onPressed: () => Navigator.pushNamed(context, '/mdc'),
               child: Text('Mdc')
+            ),
+            FlatButton(
+              onPressed: () => Navigator.pushNamed(context, '/table'),
+              child: Text('Table')
             ),
           ],
         ),

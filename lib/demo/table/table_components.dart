@@ -1,35 +1,22 @@
 import 'package:flutter/material.dart';
-import 'chip_demo.dart';
-import 'popup_menu_button_demo.dart';
-import 'button_demo.dart';
-import 'floating_action_button_demo.dart';
 
-class MaterialComponents extends StatelessWidget {
+import 'data_table_demo.dart';
+
+class TableComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MaterialComponents'),
+        title: Text('TableComponents'),
         elevation: 0.0,
       ),
       body: ListView(
         children: <Widget>[
           ListItem(
-            title: "FloatingActionButton",
-            page: FloatingActionButtonDemo()
+            title: "DataTableDemo",
+            page: DataTableDemo()
           ),
-          ListItem(
-            title: "Button",
-            page: ButtonDemo()
-          ),
-          ListItem(
-            title: "PopupMenuButton",
-            page: PopupMenuButtonDemo()
-          ),
-          ListItem(
-            title: "ChipDemo",
-            page: ChipDemo()
-          )
+          
         ],
       )
     );
