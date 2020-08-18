@@ -9,6 +9,9 @@ class DataTableDemo extends StatefulWidget {
 }
 
 class _DataTableDemoState extends State<DataTableDemo> {
+  int _sortColumnIndex = 0;
+  bool _sortAscending = false;
+  List<Post> _selected = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,15 +24,62 @@ class _DataTableDemoState extends State<DataTableDemo> {
         child: ListView(
           children: <Widget>[
             DataTable(
+              sortColumnIndex: _sortColumnIndex,
+              sortAscending: _sortAscending,
+              onSelectAll: (bool value) {
+                print( 'value: $value');
+                if(_selected.length == 0) {
+                  this.setState(() {
+
+                    _selected = posts;
+                  });
+                }else {
+                  this.setState(() {
+                    _selected = [];
+                  });
+                }
+              },
               columns: [
-                DataColumn(label: Container(
-                  width: 100.0,
-                  child: Text('Title'),
-                )),
-                DataColumn(label: Text('Author')),
-                DataColumn(label: Text('Image')),
+                DataColumn(
+                  label:  Text('Title'),
+                  onSort: (int index, bool ascending) {
+                    this.setState(() {
+                      _sortAscending = ascending;
+                      _sortColumnIndex = index;
+                      posts.sort((a,b) {
+                        if(!ascending) {
+                          final c = a;
+                          a = b;
+                          b = c;
+                        }
+                        return a.title.length.compareTo(b.title.length);
+                      });
+                    });
+                  }
+                ),
+                DataColumn(
+                  label: Text('Author'),
+                  onSort: (int index, bool ascending) {
+                    this.setState(() {
+                      _sortAscending = ascending;
+                      _sortColumnIndex = index;
+                    });
+                  }
+                ),// DataColumn(label: Text('Image')),
               ],
               rows: posts.map((Post post) => DataRow(
+                selected: _selected.contains(post),
+                onSelectChanged: (bool value) {
+                  setState(() {
+                    if(_selected.contains(post)) {
+                      _selected.remove(post);
+                    }else {
+                      _selected.add(post);
+                    }
+                  });
+
+                  print('_selected: ${_selected}');
+                },
                 cells: [
                   DataCell(
                     Text(post.title)
@@ -37,9 +87,9 @@ class _DataTableDemoState extends State<DataTableDemo> {
                   DataCell(
                     Text(post.author)
                   ),
-                  DataCell(
-                    Image.network(post.imageUrl)
-                  )
+                  // DataCell(
+                  //   Image.network(post.imageUrl)
+                  // )
                 ]
               )).toList(),
               // rows: [
