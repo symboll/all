@@ -1,4 +1,4 @@
-# should-the-thousand
+# should_the_thousand
 
 A new Flutter project.
 
