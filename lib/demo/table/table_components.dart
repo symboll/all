@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'card_demo.dart';
 import 'data_table_demo.dart';
+import 'paginated_data_table_demo.dart';
+import 'stepper_demo.dart';
 
 class TableComponents extends StatelessWidget {
   @override
@@ -15,6 +18,18 @@ class TableComponents extends StatelessWidget {
           ListItem(
             title: "DataTableDemo",
             page: DataTableDemo()
+          ),
+          ListItem(
+            title: "PaginatedDataTableDemo",
+            page: PaginatedDataTableDemo()
+          ),
+          ListItem(
+            title: "CardDemo",
+            page: CardDemo()
+          ),
+          ListItem(
+            title: "StepperDemo",
+            page: StepperDemo()
           ),
           
         ],

@@ -38,7 +38,7 @@ class DrawerDemo extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.yellow[400],
               image: DecorationImage(
-                image: NetworkImage('https://resources.ninghao.org/images/candy-shop.jpg'),
+                image: NetworkImage('https://user-gold-cdn.xitu.io/2017/11/20/15fd7937bfca9d71?w=650&h=910&f=png&s=167319'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                   Colors.yellow[400].withOpacity(0.6), 

@@ -49,7 +49,7 @@ class _ChipDemoState extends State<ChipDemo> {
                   label: Text('likanghua'),
                   avatar: CircleAvatar(
                     backgroundImage: NetworkImage(
-                      "https://user-gold-cdn.xitu.io/2019/6/14/16b5625ed9a00576?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1"
+                      "https://user-gold-cdn.xitu.io/2017/11/20/15fd7937bfca9d71?w=650&h=910&f=png&s=167319"
                     ),
                   ),
                 ),

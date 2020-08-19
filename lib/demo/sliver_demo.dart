@@ -24,7 +24,7 @@ class SliverDemo extends StatelessWidget {
                 )
               ),
               background: Image.network(
-                'https://resources.ninghao.org/images/keyclack.jpg',
+                'https://user-gold-cdn.xitu.io/2017/11/20/15fd7937bfca9d71?w=650&h=910&f=png&s=167319',
                 fit: BoxFit.cover
               ),
             ),
