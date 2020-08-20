@@ -32,6 +32,10 @@ class NavigatorDemo extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/table'),
               child: Text('Table')
             ),
+            FlatButton(
+              onPressed: () => Navigator.pushNamed(context, '/state-management'),
+              child: Text('StateManagement')
+            ),
           ],
         ),
       ),
