@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'demo/state/state_management_demo.dart';
+import 'demo/state/state_components.dart';
 import 'demo/form/form_components.dart';
 import 'demo/components/material_components.dart';
 import 'demo/basic_demo.dart';
@@ -28,7 +28,7 @@ class App extends StatelessWidget {
         '/form':  (context)=> FormComponents(),
         '/mdc':   (context) => MaterialComponents(),
         '/table': (context) => TableComponents(),
-        '/state-management': (context) => StateManagementDemo()
+        '/state-management': (context) => StateComponents()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
