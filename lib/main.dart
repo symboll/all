@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/rxdart/rxdart_demo.dart';
 import 'demo/stream/stream_components.dart';
 import 'demo/state/state_components.dart';
 import 'demo/form/form_components.dart';
@@ -30,7 +31,8 @@ class App extends StatelessWidget {
         '/mdc':   (context) => MaterialComponents(),
         '/table': (context) => TableComponents(),
         '/state-management': (context) => StateComponents(),
-        '/stream': (context) => StreamComponents()
+        '/stream': (context) => StreamComponents(),
+        '/rxDart': (context) => RxDartDemo()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
