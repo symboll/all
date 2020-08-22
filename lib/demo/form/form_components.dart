@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../list_item.dart';
 import 'alert_dialog_demo.dart';
 import 'bottom_sheet_demo.dart';
 import 'datetime_demo.dart';
@@ -66,29 +67,6 @@ class FormComponents extends StatelessWidget {
           )
         ],
       )
-    );
-  }
-}
-
-
-class ListItem extends StatelessWidget {
-  final String title;
-  final Widget page;
-  ListItem({
-    this.title,
-    this.page
-  });
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => page
-          )
-        );
-      },
     );
   }
 }

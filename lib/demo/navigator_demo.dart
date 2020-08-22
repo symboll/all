@@ -36,6 +36,10 @@ class NavigatorDemo extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/state-management'),
               child: Text('StateManagement')
             ),
+            FlatButton(
+              onPressed: () => Navigator.pushNamed(context, '/stream'),
+              child: Text('Stream')
+            ),
           ],
         ),
       ),

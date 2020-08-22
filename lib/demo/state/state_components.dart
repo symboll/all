@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../list_item.dart';
 
 import 'inherited_widget_demo.dart';
 import 'scope_mode_demo.dart';
@@ -29,29 +30,6 @@ class StateComponents extends StatelessWidget {
           )    
         ],
       )
-    );
-  }
-}
-
-
-class ListItem extends StatelessWidget {
-  final String title;
-  final Widget page;
-  ListItem({
-    this.title,
-    this.page
-  });
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => page
-          )
-        );
-      },
     );
   }
 }

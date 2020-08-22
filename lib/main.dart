@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/stream/stream_components.dart';
 import 'demo/state/state_components.dart';
 import 'demo/form/form_components.dart';
 import 'demo/components/material_components.dart';
@@ -28,7 +29,8 @@ class App extends StatelessWidget {
         '/form':  (context)=> FormComponents(),
         '/mdc':   (context) => MaterialComponents(),
         '/table': (context) => TableComponents(),
-        '/state-management': (context) => StateComponents()
+        '/state-management': (context) => StateComponents(),
+        '/stream': (context) => StreamComponents()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
