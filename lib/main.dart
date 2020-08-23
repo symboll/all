@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/bloc/bloc_demo.dart';
 import 'demo/rxdart/rxdart_demo.dart';
 import 'demo/stream/stream_components.dart';
 import 'demo/state/state_components.dart';
@@ -32,7 +33,8 @@ class App extends StatelessWidget {
         '/table': (context) => TableComponents(),
         '/state-management': (context) => StateComponents(),
         '/stream': (context) => StreamComponents(),
-        '/rxDart': (context) => RxDartDemo()
+        '/rxDart': (context) => RxDartDemo(),
+        '/bloc': (context) => BlocDemo()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,

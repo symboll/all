@@ -2,25 +2,13 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class StreamDemo extends StatelessWidget {
+
+class StreamDemo extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('StreamDemo'),
-        elevation: 0.0,
-      ),
-      body: StreamDemoHome(),
-    );
-  }
+  _StreamDemoState createState() => _StreamDemoState();
 }
 
-class StreamDemoHome extends StatefulWidget {
-  @override
-  _StreamDemoHomeState createState() => _StreamDemoHomeState();
-}
-
-class _StreamDemoHomeState extends State<StreamDemoHome> {
+class _StreamDemoState extends State<StreamDemo> {
   StreamController<String> _stream;
   StreamSubscription _streamSubscription;
   StreamSink _streamSink;
@@ -75,42 +63,48 @@ class _StreamDemoHomeState extends State<StreamDemoHome> {
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            StreamBuilder(
-              stream: _stream.stream,
-              initialData: '...',
-              builder: (context, snapshot ) {
-                return Text('${snapshot.data}');
-              }
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                FlatButton(
-                  onPressed: _addDataToStream,
-                  child: Text('Add')
-                ),
-                FlatButton(
-                  onPressed: _pauseStream,
-                  child: Text('Pause')
-                ),
-                FlatButton(
-                  onPressed: _resumeStream,
-                  child: Text('Resume')
-                ),
-                FlatButton(
-                  onPressed: _cancelStream,
-                  child: Text('Cancel')
-                )
-              ],
-            )
-          ],
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('StreamDemo'),
+        elevation: 0.0,
       ),
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              StreamBuilder(
+                stream: _stream.stream,
+                initialData: '...',
+                builder: (context, snapshot ) {
+                  return Text('${snapshot.data}');
+                }
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  FlatButton(
+                    onPressed: _addDataToStream,
+                    child: Text('Add')
+                  ),
+                  FlatButton(
+                    onPressed: _pauseStream,
+                    child: Text('Pause')
+                  ),
+                  FlatButton(
+                    onPressed: _resumeStream,
+                    child: Text('Resume')
+                  ),
+                  FlatButton(
+                    onPressed: _cancelStream,
+                    child: Text('Cancel')
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      )
     );
   }
 }
