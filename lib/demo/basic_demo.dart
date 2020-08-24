@@ -7,7 +7,7 @@ class BasicDemo extends StatelessWidget {
       // color: Colors.grey[100],
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage('https://user-gold-cdn.xitu.io/2017/11/20/15fd7937bfca9d71?w=650&h=910&f=png&s=167319'),
+          image: NetworkImage('https://resources.ninghao.net/images/candy-shop.jpg'),
           alignment: Alignment.topCenter,
           // repeat: ImageRepeat.noRepeat,
           fit: BoxFit.cover,

@@ -130,14 +130,12 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
   final _textEditingController = TextEditingController();
   @override
   void dispose() {
-    // TODO: implement dispose
     _textEditingController.dispose();
     super.dispose();
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _textEditingController.addListener(() { 
       debugPrint('${_textEditingController.text}');

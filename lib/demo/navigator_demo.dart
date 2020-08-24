@@ -48,6 +48,10 @@ class NavigatorDemo extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/bloc'),
               child: Text('Bloc')
             ),
+            FlatButton(
+              onPressed: () => Navigator.pushNamed(context, '/http'),
+              child: Text('Http')
+            ),
           ],
         ),
       ),

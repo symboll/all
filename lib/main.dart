@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/http/http_demo.dart';
 import 'demo/bloc/bloc_demo.dart';
 import 'demo/rxdart/rxdart_demo.dart';
 import 'demo/stream/stream_components.dart';
@@ -34,7 +35,8 @@ class App extends StatelessWidget {
         '/state-management': (context) => StateComponents(),
         '/stream': (context) => StreamComponents(),
         '/rxDart': (context) => RxDartDemo(),
-        '/bloc': (context) => BlocDemo()
+        '/bloc': (context) => BlocDemo(),
+        '/http': (context) => HttpDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,

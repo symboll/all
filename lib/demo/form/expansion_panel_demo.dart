@@ -21,7 +21,6 @@ class _ExpansionPanelDemoState extends State<ExpansionPanelDemo> {
   List<ExpansionPanelItem> _expansionPanelList;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _expansionPanelList = [
