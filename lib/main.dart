@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/animation/animation_demo.dart';
 import 'demo/http/http_demo.dart';
 import 'demo/bloc/bloc_demo.dart';
 import 'demo/rxdart/rxdart_demo.dart';
@@ -35,8 +36,9 @@ class App extends StatelessWidget {
         '/state-management': (context) => StateComponents(),
         '/stream': (context) => StreamComponents(),
         '/rxDart': (context) => RxDartDemo(),
-        '/bloc': (context) => BlocDemo(),
-        '/http': (context) => HttpDemo(),
+        '/bloc':   (context) => BlocDemo(),
+        '/http':   (context) => HttpDemo(),
+        '/animation': (context) => AnimationDemo()
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
@@ -51,8 +53,7 @@ class App extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
-    // TODO: implement build
+
     return DefaultTabController(
       length: 4,
       child: Scaffold(

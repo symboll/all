@@ -41,8 +41,8 @@ class _HttpDemoState extends State<HttpDemo> {
       body: FutureBuilder(
         future: fetchPosts(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          print('data: ${snapshot.data}');
-          print('connectionState: ${snapshot.connectionState}');
+          // print('data: ${snapshot.data}');
+          // print('connectionState: ${snapshot.connectionState}');
 
           if(snapshot.connectionState == ConnectionState.waiting) {
             return Center(
