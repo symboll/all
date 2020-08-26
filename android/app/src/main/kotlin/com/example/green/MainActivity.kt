@@ -1,4 +1,4 @@
-package com.example.should_the_thousand
+package com.example.all_run_into
 
 import io.flutter.embedding.android.FlutterActivity
 
