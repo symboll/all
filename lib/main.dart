@@ -78,7 +78,7 @@ class Home extends StatelessWidget {
           //   tooltip: "Navigration",
           //   onPressed: () => {}
           // ),
-          title: Text('app'.toUpperCase()),
+          title: Text('Home'.toUpperCase()),
           actions: <Widget>[
             IconButton(icon: Icon(Icons.search), tooltip: 'Serach', onPressed: () => {
               debugPrint('Search')
@@ -117,4 +117,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
